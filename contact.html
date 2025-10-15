@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    nav {
+      background: linear-gradient(90deg, #8F2121, #B83232);
+      padding: 12px 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+      padding: 8px 16px;
+      color: #FCB045;
+      font-size: 1.1rem;
+      margin: 8px 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+      background: #FCB045;
+      color: #8F2121;
+      transform: scale(1.1);
+    }
+
+    .aa {
+      height: 60px;
+      width: auto;
+    }
+
+    /* Hamburger Button */
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      width: 30px;
+      height: 3px;
+      background-color: #FCB045;
+      margin: 6px 0;
+      border-radius: 5px;
+      transition: 0.4s;
+    }
+
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+      }
+
+      .menu-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: #8F2121;
+        border-radius: 8px;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+        margin: 6px 0;
+        width: 100%;
+      }
+
+      .aa {
+        height: 50px;
+        
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav>
+    <img class="aa" src="logo 3.png" alt="Logo">
+
+    <!-- Hamburger Button -->
+    <button class="menu-btn" id="menu-toggle" aria-label="Toggle menu">
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a href="home">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- Left side image -->
+        <div class="md:block hidden">
+          <img src="menu.png" alt="Contact Illustration"
+            class="rounded-2xl shadow-xl object-cover w-full h-full md:h-[500px]">
+        </div>
+
+        <!-- Right side form -->
+        <div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl">
+          <h1 class="text-4xl font-extrabold mb-6 text-gray-900 text-center">📩 Contact Us</h1>
+          <p class="text-gray-600 mb-8 text-center">We’d love to hear your feedback, reviews, and experiences.</p>
+
+          <form action="#" method="POST">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-full sm:w-1/2">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                  <input type="text" id="name" name="name"
+                    class="w-full bg-gray-100 rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-2 px-4 leading-8 transition-all duration-200 ease-in-out">
+                </div>
+              </div>
+
+              <div class="p-2 w-full sm:w-1/2">
+                <div class="relative">
+                  <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                  <input type="email" id="email" name="email"
+                    class="w-full bg-gray-100 rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-2 px-4 leading-8 transition-all duration-200 ease-in-out">
+                </div>
+              </div>
+
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                  <textarea id="message" name="message"
+                    class="w-full bg-gray-100 rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-2 px-4 resize-none leading-6 transition-all duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+
+              <div class="p-2 w-full">
+                <button
+                  class="flex mx-auto text-white bg-red-600 border-0 py-3 px-10 focus:outline-none hover:bg-red-700 rounded-full text-lg shadow-md transition-transform transform hover:scale-105">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Contact Info -->
+          <div class="mt-10 text-center border-t border-gray-200 pt-6">
+            <a href="mailto:sodhimoksh92@gmail.com" class="text-red-600 font-semibold">sodhimoksh92@gmail.com</a>
+            <div class="mt-4 flex justify-center space-x-5">
+              <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-gray-500 hover:text-red-600 transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show image below form for small screens -->
+        <div class="md:hidden mt-10">
+          <img src="menu.png" alt="Contact Illustration"
+            class="rounded-2xl shadow-xl object-cover w-full h-auto">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+  <script>
+    // Toggle navbar menu on small screens
+    const menuBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

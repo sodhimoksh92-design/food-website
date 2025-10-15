@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    nav {
+      background: linear-gradient(90deg, #8F2121, #B83232);
+      padding: 12px 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-links a {
+      padding: 8px 16px;
+      color: #FCB045;
+      font-size: 1.2rem;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+    }
+    .nav-links a:hover {
+      background: #FCB045;
+      color: #8F2121;
+      transform: scale(1.1);
+    }
+    .aa {
+      height: 60px;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .bar {
+      height: 3px;
+      width: 25px;
+      background-color: #FCB045;
+      margin: 4px 0;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* ✅ Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .nav-links a {
+        font-size: 1rem;
+        margin-right: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(90deg, #8F2121, #B83232);
+        border-radius: 5px;
+        padding-bottom: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        margin: 8px 0;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .aa {
+        height: 50px;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+      }
+
+      h1 {
+        font-size: 1.8rem !important;
+      }
+
+      p {
+        font-size: 0.95rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav>
+    <img class="aa" src="logo 3.png" alt="Logo">
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="home">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- Food Menu Section -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-4xl text-3xl font-extrabold title-font mb-4 text-gray-900">🍔 Our Delicious Menu</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-gray-600">
+          Explore our wide variety of dishes made with love and served with perfection.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="flex flex-wrap -m-4 justify-center">
+
+        <!-- Card 1 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <img alt="food" class="h-48 w-full object-cover rounded-t-2xl" src="food img 1.jpg">
+            <div class="p-6 text-center">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Restaurant Special</h2>
+              <h1 class="title-font text-xl font-bold text-gray-900 mb-3">Cheese Burger</h1>
+              <p class="leading-relaxed mb-3 text-gray-600">$450</p>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <img alt="food" class="h-48 w-full object-cover rounded-t-2xl" src="food img 2.jpg">
+            <div class="p-6 text-center">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Restaurant Special</h2>
+              <h1 class="title-font text-xl font-bold text-gray-900 mb-3">Veggie Pizza</h1>
+              <p class="leading-relaxed mb-3 text-gray-600">$800</p>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <img alt="food" class="h-48 w-full object-cover rounded-t-2xl" src="food image 3.jpg">
+            <div class="p-6 text-center">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Restaurant Special</h2>
+              <h1 class="title-font text-xl font-bold text-gray-900 mb-3">Grilled Sandwich</h1>
+              <p class="leading-relaxed mb-3 text-gray-600">$800</p>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+            <img alt="food" class="h-48 w-full object-cover rounded-t-2xl" src="food img 4.jpg">
+            <div class="p-6 text-center">
+              <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Restaurant Special</h2>
+              <h1 class="title-font text-xl font-bold text-gray-900 mb-3">Pasta Alfredo</h1>
+              <p class="leading-relaxed mb-3 text-gray-600">$960</p>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-700 transition">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ Continue adding same card format for more dishes -->
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Elfsight Social Share Buttons -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-d13ac97e-4518-4e7c-8d2b-298cafdbc585" data-elfsight-app-lazy></div>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #8F2121;
+      padding: 10px 20px;
+      border-radius: 7px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 5px;
+      font-weight: bold;
+      color: #FCB045;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a {
+      padding: 8px 12px;
+      color: #FCB045;
+      font-size: large;
+      margin-right: 15px;
+      text-decoration: none;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .aa {
+      height: 55px;
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: #FCB045;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Mobile menu */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #8F2121;
+        border-radius: 0 0 7px 7px;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: medium;
+        margin: 10px 0;
+      }
+    }
+
+    /* General Styling */
+    .bb {
+      width: 100%;
+      margin-top: 7px;
+      border-radius: 10px;
+    }
+
+    .cc, .dd {
+      height: auto;
+      width: 45%;
+      max-width: 100%;
+      border-radius: 30px;
+      margin: 10px;
+    }
+
+    .uu, .ff, .jj, .nn {
+      text-align: center;
+      text-decoration: underline;
+      margin: 20px 0;
+    }
+
+    .rr {
+      margin-left: 65px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .gallery, .chef-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .hh, .hn, .gn, .ss, .tt, .mm {
+      height: auto;
+      width: 30%;
+      border-radius: 10px;
+    }
+
+    .yy, .ww, .ll {
+      border-radius: 15px;
+      height: auto;
+      width: 30%;
+    }
+
+    .container {
+      padding: 17px;
+      background-color: antiquewhite;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+
+    input {
+      width: 98%;
+      padding: 15px;
+      margin: 5px 0;
+      display: inline-block;
+      background-color: whitesmoke;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .qq {
+      width: 100%;
+      background-color: #8F2121;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .qq:hover {
+      background-color: #A62C2C;
+    }
+
+    /* Responsive Layout Adjustments */
+    @media (max-width: 1024px) {
+      .rr {
+        margin-left: 20px;
+      }
+
+      .cc, .dd {
+        width: 48%;
+      }
+
+      .hh, .hn, .gn, .ss, .tt, .mm {
+        width: 45%;
+      }
+
+      .yy, .ww, .ll {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cc, .dd {
+        width: 90%;
+      }
+
+      .gallery img,
+      .chef-section img {
+        width: 90%;
+      }
+
+      .rr {
+        margin-left: 0;
+      }
+
+      .container {
+        width: 90%;
+      }
+
+      .yy, .ww, .ll {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cc, .dd {
+        width: 100%;
+      }
+
+      .gallery img, .chef-section img {
+        width: 100%;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .qq {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <img class="aa" src="logo2.png" alt="Logo">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="menu.html">MENU</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <img class="bb" src="imgres.jpg" alt="Banner">
+  <hr>
+
+  <h1 class="uu">OUR SERVICES</h1>
+  <div class="rr">
+    <img class="cc" src="menu.png" alt="Service 1">
+    <img class="cc" src="menu.png" alt="Service 2">
+
+    <h1 class="ff">Gallery</h1>
+    <hr>
+
+    <div class="gallery">
+      <img class="hh" src="food img 1.jpg" alt="Food 1">
+      <img class="hn" src="food img 2.jpg" alt="Food 2">
+      <img class="gn" src="food img 5.jpeg" alt="Food 3">
+      <img class="ss" src="food img 6.jpg" alt="Food 4">
+      <img class="tt" src="food img 7.jpg" alt="Food 5">
+      <img class="mm" src="food img 8.jpg" alt="Food 6">
+    </div>
+
+    <hr>
+    <h1 class="nn">OUR CHEF</h1>
+    <div class="chef-section">
+      <img class="yy" src="chef 1 - Copy.avif" alt="Chef 1">
+      <img class="ww" src="chef2.avif" alt="Chef 2">
+      <img class="ll" src="chef 3.avif" alt="Chef 3">
+    </div>
+
+    <hr>
+    <h1 class="jj">REVIEW US</h1>
+    <hr>
+  </div>
+
+  <div class="container">
+    <form>
+      <label>NAME</label>
+      <input type="text" placeholder="Enter your name"><br>
+      <label>MOBILE NO.</label>
+      <input type="tel" placeholder="Enter your mobile number"><br>
+      <label>MESSAGE</label>
+      <input type="text" placeholder="Your message"><br>
+    </form>
+    <button class="qq">SUBMIT</button>
+  </div>
+
+  <!-- AddToAny BEGIN -->
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_mastodon"></a>
+    <a class="a2a_button_email"></a>
+  </div>
+  <script defer src="https://static.addtoany.com/menu/page.js"></script>
+  <!-- AddToAny END -->
+
+  <!-- Navbar Toggle Script -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
